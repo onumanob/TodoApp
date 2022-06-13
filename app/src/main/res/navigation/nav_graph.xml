@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="com.ashik.todoapp.TodoListFragment"
+        android:label="fragment_todo_list"
+        tools:layout="@layout/fragment_todo_list" >
+        <action
+            android:id="@+id/action_todoListFragment_to_newTodoFragment"
+            app:destination="@id/newTodoFragment" />
+        <action
+            android:id="@+id/action_todoListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ashik.todoapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/newTodoFragment"
+        android:name="com.ashik.todoapp.NewTodoFragment"
+        android:label="fragment_new_todo"
+        tools:layout="@layout/fragment_new_todo" />
+
+</navigation>
